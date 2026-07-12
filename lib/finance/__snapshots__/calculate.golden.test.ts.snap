@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Golden file — EPC Starter Template (epcStarterTemplate) > pinned: EPC totalRevenue 6 sig-fig stable 1`] = `339728000`;
+
+exports[`Golden file — Reference 50 MWp Solar IPP (referenceSolarIppTemplate) > pinned: equityIrr 4 sig-fig stable 1`] = `0.1749`;
+
+exports[`Golden file — Reference 50 MWp Solar IPP (referenceSolarIppTemplate) > pinned: first-period DSCR 5 sig-fig stable 1`] = `2.7852`;
+
+exports[`Golden file — Reference 50 MWp Solar IPP (referenceSolarIppTemplate) > pinned: paybackPeriod 4 sig-fig stable 1`] = `6.714`;
+
+exports[`Golden file — Reference 50 MWp Solar IPP (referenceSolarIppTemplate) > pinned: projectIrr 4 sig-fig stable 1`] = `0.1367`;
+
+exports[`Golden file — Reference 50 MWp Solar IPP (referenceSolarIppTemplate) > pinned: totalRevenue 6 sig-fig stable 1`] = `194406000`;
