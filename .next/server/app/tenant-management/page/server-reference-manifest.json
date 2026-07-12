@@ -1,4 +1,17 @@
 {
-  "node": {},
+  "node": {
+    "00dec2527a80831c9d9ee549c3479d81a8f2a1a194": {
+      "workers": {
+        "app/tenant-management/page": {
+          "moduleId": 28092,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "app/auth/actions.ts"
+        }
+      },
+      "exportedName": "signOut",
+      "filename": "app/auth/actions.ts"
+    }
+  },
   "edge": {}
 }
