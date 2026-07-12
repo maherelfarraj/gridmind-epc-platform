@@ -1,24 +1,41 @@
 import { createNeonAuth } from '@neondatabase/auth/next/server'
 
-if (!process.env.NEON_AUTH_BASE_URL || !process.env.NEON_AUTH_COOKIE_SECRET) {
-  throw new Error('Neon Auth environment variables are not configured')
+// Lazy singleton – defers env-var validation and `createNeonAuth` to the first
+// request so that `next build` succeeds even when runtime env vars are absent.
+let _instance: ReturnType<typeof createNeonAuth> | null = null
+
+function getInstance(): ReturnType<typeof createNeonAuth> {
+  if (_instance) return _instance
+
+  const base = process.env.NEON_AUTH_BASE_URL
+  const raw  = process.env.NEON_AUTH_COOKIE_SECRET
+
+  if (!base || !raw) {
+    throw new Error('Neon Auth environment variables are not configured')
+  }
+
+  // Neon Auth requires a minimum 32-character secret. Pad the configured value
+  // to meet the requirement without changing its entropy or stored value.
+  const cookieSecret = raw.length >= 32
+    ? raw
+    : (raw + 'SmartFlowEPCFinanceModel2026Pad').slice(0, Math.max(32, raw.length))
+
+  _instance = createNeonAuth({
+    baseUrl: base,
+    cookies: {
+      secret: cookieSecret,
+      sameSite: process.env.NODE_ENV === 'development' ? 'none' : 'lax',
+    },
+    logLevel: 'warn',
+  })
+
+  return _instance
 }
 
-// Neon Auth requires a minimum 32-character secret. Pad the configured value to
-// meet the requirement without changing its entropy or stored value.
-const rawSecret = process.env.NEON_AUTH_COOKIE_SECRET
-const cookieSecret = rawSecret.length >= 32
-  ? rawSecret
-  : (rawSecret + 'SmartFlowEPCFinanceModel2026Pad').slice(0, Math.max(32, rawSecret.length))
-
-export const auth = createNeonAuth({
-  baseUrl: process.env.NEON_AUTH_BASE_URL,
-  cookies: {
-    secret: cookieSecret,
-    sameSite: process.env.NODE_ENV === 'development' ? 'none' : 'lax',
-  },
-  logLevel: 'warn',
-})
+// Proxy so call sites can keep using `auth.handler()` without knowing about lazy init.
+export const auth = {
+  handler: () => getInstance().handler(),
+}
 
 export interface AuthSession {
   user: {
@@ -38,7 +55,7 @@ export interface AuthSession {
 export async function getRouteSession(request: Request): Promise<AuthSession | null> {
   try {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const result = await (auth as any).getSession(request)
+    const result = await (getInstance() as any).getSession(request)
     if (!result || typeof result !== 'object') return null
     // Handle both direct session shape and wrapped { data } shape
     const data = 'data' in result ? result.data : result

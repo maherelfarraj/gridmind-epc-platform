@@ -13,6 +13,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getRouteSession } from '@/lib/auth/server'
 import { db } from '@/lib/db'
+
+export const dynamic = 'force-dynamic'
 import { financialImports } from '@/lib/db/schema'
 import { summariseImportHealth, type ImportJobObservability } from '@/lib/finance/observability'
 import { and, desc, eq, sql } from 'drizzle-orm'

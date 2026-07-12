@@ -10,6 +10,7 @@ import { financialImports } from '@/lib/db/schema'
 import { checkRateLimit as checkRateLimitDb, validateMagicBytes, detectZipBomb, UPLOAD_LIMITS } from '@/lib/finance/rate-limit'
 
 export const runtime = 'nodejs'
+export const dynamic = 'force-dynamic'
 export const maxDuration = 120
 
 // ─── Constants ────────────────────────────────────────────────────────────────
