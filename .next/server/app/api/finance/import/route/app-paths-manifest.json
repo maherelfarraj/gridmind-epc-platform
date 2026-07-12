@@ -1,0 +1,3 @@
+{
+  "/api/finance/import/route": "app/api/finance/import/route.js"
+}
