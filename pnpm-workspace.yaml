@@ -1,5 +1,8 @@
+overrides:
+  hono: 4.12.25
+
 allowBuilds:
-  core-js: set this to true or false
-  msw: set this to true or false
-  sharp: set this to true or false
-  unrs-resolver: set this to true or false
+  core-js: true
+  msw: true
+  sharp: true
+  unrs-resolver: true
