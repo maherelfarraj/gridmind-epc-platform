@@ -54,7 +54,6 @@ export interface AuthSession {
  */
 export async function getRouteSession(request: Request): Promise<AuthSession | null> {
   try {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const result = await (getInstance() as any).getSession(request)
     if (!result || typeof result !== 'object') return null
     // Handle both direct session shape and wrapped { data } shape

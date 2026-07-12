@@ -76,7 +76,6 @@ function buildWaterfall(result: FinancialModelResult, currency: string): Waterfa
   return bars
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function WaterfallTooltip({ active, payload, currency }: any) {
   if (!active || !payload?.length) return null
   const bar: WaterfallBar = payload[0]?.payload

@@ -1,0 +1,318 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "onMatchHeaders": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/api/auth/[...path]",
+      "regex": "^/api/auth/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpath": "nxtPpath"
+      },
+      "namedRegex": "^/api/auth/(?<nxtPpath>.+?)(?:/)?$"
+    },
+    {
+      "page": "/api/files/[...pathname]",
+      "regex": "^/api/files/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpathname": "nxtPpathname"
+      },
+      "namedRegex": "^/api/files/(?<nxtPpathname>.+?)(?:/)?$"
+    },
+    {
+      "page": "/finance/models/[id]",
+      "regex": "^/finance/models/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/finance/models/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/projects/[id]",
+      "regex": "^/projects/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/projects/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin",
+      "regex": "^/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/ai",
+      "regex": "^/ai(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ai(?:/)?$"
+    },
+    {
+      "page": "/ai/controls",
+      "regex": "^/ai/controls(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ai/controls(?:/)?$"
+    },
+    {
+      "page": "/ai/delivery",
+      "regex": "^/ai/delivery(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ai/delivery(?:/)?$"
+    },
+    {
+      "page": "/ai/executive",
+      "regex": "^/ai/executive(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ai/executive(?:/)?$"
+    },
+    {
+      "page": "/api/finance/import",
+      "regex": "^/api/finance/import(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/finance/import(?:/)?$"
+    },
+    {
+      "page": "/api/finance/import/jobs",
+      "regex": "^/api/finance/import/jobs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/finance/import/jobs(?:/)?$"
+    },
+    {
+      "page": "/api/finance/seed-reference",
+      "regex": "^/api/finance/seed\\-reference(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/finance/seed\\-reference(?:/)?$"
+    },
+    {
+      "page": "/approvals",
+      "regex": "^/approvals(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/approvals(?:/)?$"
+    },
+    {
+      "page": "/auth/sign-in",
+      "regex": "^/auth/sign\\-in(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/sign\\-in(?:/)?$"
+    },
+    {
+      "page": "/auth/sign-up",
+      "regex": "^/auth/sign\\-up(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/sign\\-up(?:/)?$"
+    },
+    {
+      "page": "/changes-claims",
+      "regex": "^/changes\\-claims(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/changes\\-claims(?:/)?$"
+    },
+    {
+      "page": "/client-portal",
+      "regex": "^/client\\-portal(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/client\\-portal(?:/)?$"
+    },
+    {
+      "page": "/construction",
+      "regex": "^/construction(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/construction(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/documents",
+      "regex": "^/documents(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/documents(?:/)?$"
+    },
+    {
+      "page": "/engineering",
+      "regex": "^/engineering(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/engineering(?:/)?$"
+    },
+    {
+      "page": "/finance",
+      "regex": "^/finance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/finance(?:/)?$"
+    },
+    {
+      "page": "/finance/models/new",
+      "regex": "^/finance/models/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/finance/models/new(?:/)?$"
+    },
+    {
+      "page": "/hse",
+      "regex": "^/hse(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hse(?:/)?$"
+    },
+    {
+      "page": "/knowledge-base",
+      "regex": "^/knowledge\\-base(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/knowledge\\-base(?:/)?$"
+    },
+    {
+      "page": "/notifications",
+      "regex": "^/notifications(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/notifications(?:/)?$"
+    },
+    {
+      "page": "/opportunities",
+      "regex": "^/opportunities(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/opportunities(?:/)?$"
+    },
+    {
+      "page": "/procurement",
+      "regex": "^/procurement(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/procurement(?:/)?$"
+    },
+    {
+      "page": "/projects",
+      "regex": "^/projects(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/projects(?:/)?$"
+    },
+    {
+      "page": "/projects/new",
+      "regex": "^/projects/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/projects/new(?:/)?$"
+    },
+    {
+      "page": "/qaqc",
+      "regex": "^/qaqc(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/qaqc(?:/)?$"
+    },
+    {
+      "page": "/reports",
+      "regex": "^/reports(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports(?:/)?$"
+    },
+    {
+      "page": "/risk",
+      "regex": "^/risk(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/risk(?:/)?$"
+    },
+    {
+      "page": "/scada",
+      "regex": "^/scada(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/scada(?:/)?$"
+    },
+    {
+      "page": "/schedule",
+      "regex": "^/schedule(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/schedule(?:/)?$"
+    },
+    {
+      "page": "/settings",
+      "regex": "^/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/settings(?:/)?$"
+    },
+    {
+      "page": "/simulator",
+      "regex": "^/simulator(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/simulator(?:/)?$"
+    },
+    {
+      "page": "/solar-analytics",
+      "regex": "^/solar\\-analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/solar\\-analytics(?:/)?$"
+    },
+    {
+      "page": "/stage-gates",
+      "regex": "^/stage\\-gates(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/stage\\-gates(?:/)?$"
+    },
+    {
+      "page": "/tenant-management",
+      "regex": "^/tenant\\-management(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tenant\\-management(?:/)?$"
+    },
+    {
+      "page": "/testing",
+      "regex": "^/testing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/testing(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

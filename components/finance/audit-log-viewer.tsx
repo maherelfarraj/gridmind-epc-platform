@@ -86,7 +86,6 @@ export function AuditLogViewer({ slug }: { slug: string }) {
         setLoaded(true)
       }
     })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug])
 
   return (
