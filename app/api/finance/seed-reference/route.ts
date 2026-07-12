@@ -2,6 +2,8 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { getRouteSession } from '@/lib/auth/server'
 import { seedReferenceTemplate } from '@/lib/finance/reference-seed'
 
+export const dynamic = 'force-dynamic'
+
 /**
  * POST /api/finance/seed-reference
  *

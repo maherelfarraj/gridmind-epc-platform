@@ -3,6 +3,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { getRouteSession } from '@/lib/auth/server'
 
 export const runtime = 'nodejs'
+export const dynamic = 'force-dynamic'
 
 /**
  * GET /api/files/<pathname>
