@@ -134,11 +134,13 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
 
   // Focus input when opened
   useEffect(() => {
-    if (open) {
+    if (!open) return
+    const id = setTimeout(() => {
       setQuery('')
       setActiveIndex(0)
-      setTimeout(() => inputRef.current?.focus(), 50)
-    }
+      inputRef.current?.focus()
+    }, 50)
+    return () => clearTimeout(id)
   }, [open])
 
   // Filter

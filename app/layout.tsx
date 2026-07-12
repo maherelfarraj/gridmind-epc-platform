@@ -1,14 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
 import { WorkspaceProvider } from '@/lib/workspace-store'
 import './globals.css'
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'GridMind EPC — GSI Holding Company',
@@ -29,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} bg-background font-sans`} style={{ colorScheme: 'dark' }}>
+    <html lang="en" className="bg-background font-sans" style={{ colorScheme: 'dark' }}>
       <body className="antialiased font-sans">
         <WorkspaceProvider>{children}</WorkspaceProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}

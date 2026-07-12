@@ -210,8 +210,8 @@ export default function SimulatorPage() {
   useEffect(() => {
     if (!running) return
     if (currentStep >= TOTAL_STEPS || halted) {
-      setRunning(false)
-      return
+      const id = setTimeout(() => setRunning(false), 0)
+      return () => clearTimeout(id)
     }
     const t = setTimeout(() => {
       const cont = advance()

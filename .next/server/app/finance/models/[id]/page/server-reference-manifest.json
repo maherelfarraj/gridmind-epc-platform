@@ -1,0 +1,245 @@
+{
+  "node": {
+    "400286ca32e224dde95fe504c61e15e7886f55b2a6": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "loadFinancialModel",
+          "filename": "app/actions/financial-models.ts"
+        }
+      },
+      "exportedName": "loadFinancialModel",
+      "filename": "app/actions/financial-models.ts"
+    },
+    "4057205a4eac4a32072681c62455c68d7f6a5b6e7e": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "listModelCollaborators",
+          "filename": "app/actions/financial-models.ts"
+        }
+      },
+      "exportedName": "listModelCollaborators",
+      "filename": "app/actions/financial-models.ts"
+    },
+    "409a59cff95b08244b9cf3105c87428b6aa8ded78a": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "listFinancialModelVersions",
+          "filename": "app/actions/financial-models.ts"
+        }
+      },
+      "exportedName": "listFinancialModelVersions",
+      "filename": "app/actions/financial-models.ts"
+    },
+    "40b2a91fcbfa9bd21020fdb77288c460a5d83e0dc6": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "submitFinancialModel",
+          "filename": "app/actions/financial-models.ts"
+        }
+      },
+      "exportedName": "submitFinancialModel",
+      "filename": "app/actions/financial-models.ts"
+    },
+    "40b58d2549a2768c80e44f041ad244a1832272a925": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "listModelAuditLog",
+          "filename": "app/actions/financial-models.ts"
+        }
+      },
+      "exportedName": "listModelAuditLog",
+      "filename": "app/actions/financial-models.ts"
+    },
+    "40e74db13ff829cf86667ff60921b3cf8f2c9c4842": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "loadApprovedSnapshot",
+          "filename": "app/actions/financial-models.ts"
+        }
+      },
+      "exportedName": "loadApprovedSnapshot",
+      "filename": "app/actions/financial-models.ts"
+    },
+    "606966ea97b34f02eecfde002378fe21ae1cecbaa9": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "rejectFinancialModel",
+          "filename": "app/actions/financial-models.ts"
+        }
+      },
+      "exportedName": "rejectFinancialModel",
+      "filename": "app/actions/financial-models.ts"
+    },
+    "6069bc5a188ab130e3e303c14ada53e82b14e0f17e": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "approveFinancialModel",
+          "filename": "app/actions/financial-models.ts"
+        }
+      },
+      "exportedName": "approveFinancialModel",
+      "filename": "app/actions/financial-models.ts"
+    },
+    "703aa9fcbecda65f4750086060d06f30976f27bd4a": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "updateModelCollaborator",
+          "filename": "app/actions/financial-models.ts"
+        }
+      },
+      "exportedName": "updateModelCollaborator",
+      "filename": "app/actions/financial-models.ts"
+    },
+    "7815d048809cc4b32045f45303ee158c22782fc61d": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "saveFinancialModel",
+          "filename": "app/actions/financial-models.ts"
+        }
+      },
+      "exportedName": "saveFinancialModel",
+      "filename": "app/actions/financial-models.ts"
+    },
+    "40504d341268a79840168e4f0d463026cb201dd3aa": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "listModelRoles",
+          "filename": "lib/finance/permissions.ts"
+        }
+      },
+      "exportedName": "listModelRoles",
+      "filename": "lib/finance/permissions.ts"
+    },
+    "60a40d1b5e0fbbb9908058f886a06403b3f6c4e303": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "getUserModelRole",
+          "filename": "lib/finance/permissions.ts"
+        }
+      },
+      "exportedName": "getUserModelRole",
+      "filename": "lib/finance/permissions.ts"
+    },
+    "70b4ed3c0c12c2cd9125aa013b84186b7e7712d5ef": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "assertCan",
+          "filename": "lib/finance/permissions.ts"
+        }
+      },
+      "exportedName": "assertCan",
+      "filename": "lib/finance/permissions.ts"
+    },
+    "70eb8e2a18b6254f0c37b4eb805b651fdb11edc581": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "revokeModelRole",
+          "filename": "lib/finance/permissions.ts"
+        }
+      },
+      "exportedName": "revokeModelRole",
+      "filename": "lib/finance/permissions.ts"
+    },
+    "784c4e0fbff4a6f47fa8d1fc388d0b26bd034199f6": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "grantModelRole",
+          "filename": "lib/finance/permissions.ts"
+        }
+      },
+      "exportedName": "grantModelRole",
+      "filename": "lib/finance/permissions.ts"
+    },
+    "4020f77ef0934d597838660a707632b6ac44de640c": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "listModelActuals",
+          "filename": "app/actions/model-actuals.ts"
+        }
+      },
+      "exportedName": "listModelActuals",
+      "filename": "app/actions/model-actuals.ts"
+    },
+    "6045c79af633be3b8c4ab9b745ef893ea0ffc0fcfa": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "unlockModelActual",
+          "filename": "app/actions/model-actuals.ts"
+        }
+      },
+      "exportedName": "unlockModelActual",
+      "filename": "app/actions/model-actuals.ts"
+    },
+    "608aeac4e216d66d099c4d5ca5c9540d1425cca49a": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "lockModelActual",
+          "filename": "app/actions/model-actuals.ts"
+        }
+      },
+      "exportedName": "lockModelActual",
+      "filename": "app/actions/model-actuals.ts"
+    },
+    "7e5d3adcb865baa320251d830f8a5b6dabb6d438f5": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "saveModelActual",
+          "filename": "app/actions/model-actuals.ts"
+        }
+      },
+      "exportedName": "saveModelActual",
+      "filename": "app/actions/model-actuals.ts"
+    },
+    "001b4e11d53e2dd41b49b4798b6848d0d026f6fa96": {
+      "workers": {
+        "app/finance/models/[id]/page": {
+          "moduleId": 190556,
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "app/auth/actions.ts"
+        }
+      },
+      "exportedName": "signOut",
+      "filename": "app/auth/actions.ts"
+    }
+  },
+  "edge": {}
+}

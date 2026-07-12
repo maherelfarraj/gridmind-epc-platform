@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/stage-gates/layout,_N_T_/stage-gates/page,_N_T_/stage-gates"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/stage-gates/__PAGE__",
+    "/stage-gates",
+    "/_index",
+    "/_head"
+  ]
+}

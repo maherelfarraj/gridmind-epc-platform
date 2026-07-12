@@ -110,6 +110,21 @@ export default function ProjectDetailPage({ params }: { params: Promise<{ id: st
   const linkedCurrency = linkedModel.assumptions.currency
   const linkedCompact = new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 1 })
 
+  // Cumulative cashflow — monthly billings ramp from 0 to project.progress% of valueSAR
+  // Revenue lags cost in early months (front-loaded cost is typical EPC cash burn)
+  const cashflowData = useMemo(() => {
+    if (!project) return []
+    const totalM = project.valueSAR / 1_000_000
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+    const revPct  = [0.04, 0.07, 0.11, 0.16, 0.22, 0.28]
+    const costPct = [0.05, 0.08, 0.13, 0.17, 0.21, 0.26]
+    return months.map((month, i) => ({
+      month,
+      revenue: parseFloat((totalM * revPct[i]).toFixed(1)),
+      cost:    parseFloat((totalM * costPct[i]).toFixed(1)),
+    }))
+  }, [project])
+
   if (!project) {
     return (
       <AppLayout>
@@ -127,20 +142,6 @@ export default function ProjectDetailPage({ params }: { params: Promise<{ id: st
       </AppLayout>
     )
   }
-
-  // Cumulative cashflow — monthly billings ramp from 0 to project.progress% of valueSAR
-  // Revenue lags cost in early months (front-loaded cost is typical EPC cash burn)
-  const cashflowData = useMemo(() => {
-    const totalM = project.valueSAR / 1_000_000
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
-    const revPct  = [0.04, 0.07, 0.11, 0.16, 0.22, 0.28]
-    const costPct = [0.05, 0.08, 0.13, 0.17, 0.21, 0.26]
-    return months.map((month, i) => ({
-      month,
-      revenue: parseFloat((totalM * revPct[i]).toFixed(1)),
-      cost:    parseFloat((totalM * costPct[i]).toFixed(1)),
-    }))
-  }, [project.valueSAR])
 
   const phaseProgressLabel = project.progress >= 80 ? 'Near completion' : project.progress >= 40 ? 'On schedule' : 'Early stage'
 

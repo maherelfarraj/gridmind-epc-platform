@@ -681,7 +681,7 @@ function totalAbsSum(values: number[]): number {
 function buildLineage(
   input: FinancialModelAssumptions,
   periods: ModelPeriod[],
-  metrics: ModelMetrics,  // eslint-disable-line @typescript-eslint/no-unused-vars -- all fields used below
+  metrics: ModelMetrics,
 ): ModelLineage {
   const ccy = input.currency
   const ppy = { annual: 1, semiannual: 2, quarterly: 4, monthly: 12 }[input.periodicity]

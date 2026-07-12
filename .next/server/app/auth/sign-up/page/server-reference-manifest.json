@@ -1,0 +1,29 @@
+{
+  "node": {
+    "603e5582afc78bb911f3749f9aa402c0fe278488e2": {
+      "workers": {
+        "app/auth/sign-up/page": {
+          "moduleId": 567165,
+          "async": false,
+          "exportedName": "signInWithEmail",
+          "filename": "app/auth/actions.ts"
+        }
+      },
+      "exportedName": "signInWithEmail",
+      "filename": "app/auth/actions.ts"
+    },
+    "60158014f7cf18ff23a3c75c4b4dcb1ba17617322f": {
+      "workers": {
+        "app/auth/sign-up/page": {
+          "moduleId": 567165,
+          "async": false,
+          "exportedName": "signUpWithEmail",
+          "filename": "app/auth/actions.ts"
+        }
+      },
+      "exportedName": "signUpWithEmail",
+      "filename": "app/auth/actions.ts"
+    }
+  },
+  "edge": {}
+}
